@@ -18,8 +18,8 @@ backup_dir = os.path.join(user_profile, "Desktop", "Backup_Minecraft")
 #https://drive.google.com/drive/u/3/folders/1ercgZE57G7-DsdSYSeyurj57hhijl <= only the end part
 folder_id = '1ercgZE57G7-DsdSYSeyurj57hhijl'
 
-date_jour = datetime.now().strftime("%d-%m-%Y")
-zip_filename = f"{save_name}_{date_jour}"
+day_date = datetime.now().strftime("%d-%m-%Y")
+zip_filename = f"{save_name}_{day_date}"
 zip_filepath = os.path.join(backup_dir, zip_filename)
 
 
@@ -66,4 +66,4 @@ fichier_drive.SetContentFile(path_zip)
 fichier_drive.Upload()
 
 print("Done.")
-input("Appuyez sur Entree pour quitter...")
+input("Press enter to quit...")
