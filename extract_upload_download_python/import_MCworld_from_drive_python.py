@@ -1,5 +1,6 @@
 import os
 import shutil
+import json
 from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
  
@@ -7,12 +8,42 @@ from pydrive2.drive import GoogleDrive
 
 print("\n Starting import...")
 
+config_file = "config.json"
+
+default_config = {
+    "save_name": "replace here the Save_Name",
+    "modpack_name": "replace here the Modpack_Name, and below this line, let the path empty if it is in the default folder, else replace it",
+    "custom_path": "",
+    "folder_id": "replace here the google drive code (you should check the doc on github) 1ercgZE57G7-DsdSYSeyurj57hhijl"
+}
+
+if not os.path.exists(config_file):
+    with open(config_file, "w", encoding="utf-8") as f:
+        json.dump(default_config, f, indent=4)
+    print(f"\n Please fill the '{config_file}' with the right values like in the github documentation.")
+    print("\n https://github.com/DaemoniaX/Minecraft-save-cloud-sync-for-essential-modpack")
+    input("\n Press enter to quit...")
+    exit()
+
+with open(config_file, "r", encoding="utf-8") as f:
+    config = json.load(f)
+
+save_name = config["save_name"]
+modpack_name = config["modpack_name"]
+custom_path = config.get("custom_path", "")
+folder_id = config["folder_id"]
+
 # change name, path, and folder id if needed
 user_profile = os.path.expanduser("~")
-target_dir = os.path.join(user_profile, "curseforge", "minecraft", "Instances", "Endless Terrors", "saves", "Survie Horreur")
 temp_dir = os.path.join(user_profile, "Desktop", "Temp_MC_Restore")
 temp_zip_path = os.path.join(temp_dir, "latest_backup.zip")
-folder_id = '1rcheeZRT-RpBDH74evyEYrkA' #random id
+
+if custom_path == "":
+    base_instances_dir = os.path.join(user_profile, "curseforge", "minecraft", "Instances")
+else:
+    base_instances_dir = custom_path
+
+target_dir = os.path.join(base_instances_dir, modpack_name, "saves", save_name)
 
 print("\n Attempting connection...")
 

@@ -2,8 +2,8 @@ tuto/
 venv/
 extract_upload_download_python/client_secrets.json
 extract_upload_download_python/saved_login.txt
+extract_upload_download_python/config.json
 __pycache__/
 *.pyc
 build/
-dist/
 *.spec
