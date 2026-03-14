@@ -38,7 +38,7 @@ This is why I converted them into a .EXE file. You can find them in the /extract
     
 3. **Share**
       
-   Share the 2 .exe script to your friends, as well as the config.json file.
+   Share the 2 .exe script to your friends, as well as the config.json file.  
    DO NOT SHARE client_secrets.json saved_login.txt to anyone.
   
 4. **Setup the Google Server access**
@@ -63,12 +63,12 @@ This is why I converted them into a .EXE file. You can find them in the /extract
   
 1. **Download**
 
-   Install the 2 scripts '.py' in /extract_upload_download_python
-   Install the required library using pip.
+   Install the 2 scripts '.py' in /extract_upload_download_python  
+   Install the required library using pip.  
      
 2. **Edit**
 
-   Start the python file, follow the instructions, fill the config.json file.
+   Start the python file, follow the instructions, fill the config.json file.  
    Compile to .exe using this command : 
    ```cmd
    pyinstaller --onefile export_MCworld_to_drive_python.py
@@ -76,7 +76,7 @@ This is why I converted them into a .EXE file. You can find them in the /extract
     
 3. **Share**
       
-   Share the edited script to your friends, as well as the config.json file.
+   Share the edited script to your friends, as well as the config.json file.  
    DO NOT SHARE client_secrets.json saved_login.txt to anyone.
   
 4. **Setup the Google Server access**
@@ -86,25 +86,25 @@ This is why I converted them into a .EXE file. You can find them in the /extract
   
 ## 💡 Usage
 
-* Batch : Use the script to compress the save, use the other scipt to decompress it.
+* Batch : Use the script to compress the save, use the other scipt to decompress it.  
 * Python : Install Python and :
 ```cmd
 python -m venv venv
 venv\Scripts\activate
 pip install pydrive2 pyinstaller
 ```
-* .EXE : Use the scripts and configure the config.json file.
+* .EXE : Use the scripts and configure the config.json file.  
   
 ---
   
 ## Google Drive id/link config.json
 
-What is a folder id? on google drive, go inside the folder you want your save to be into, and copy only the end of the link
-https://drive.google.com/drive/u/3/folders/1ercgZE57G7-DsdSYSeyurj57hhijl <= only the end part (btw this is a random link)
-folder_id = '1ercgZE57G7-DsdSYSeyurj57hhijl'
+What is a folder id? on google drive, go inside the folder you want your save to be into, and copy only the end of the link  
+https://drive.google.com/drive/u/3/folders/1ercgZE57G7-DsdSYSeyurj57hhijl <= only the end part (btw this is a random link)  
+folder_id = '1ercgZE57G7-DsdSYSeyurj57hhijl'  
   
-To allow access to the Google Drive files, you need to configue the Google Cloud server access.
-You can follow this tutorial about it : https://www.youtube.com/watch?v=wde6yn9z-vY
+To allow access to the Google Drive files, you need to configue the Google Cloud server access.  
+You can follow this tutorial about it : https://www.youtube.com/watch?v=wde6yn9z-vY  
   
 
 ## 🛠️ Tech Stack
@@ -115,10 +115,10 @@ You can follow this tutorial about it : https://www.youtube.com/watch?v=wde6yn9z
   
 ## 🤝 Contributing
   
-This was made following a batch tutorial, and the official Microsoft Doc.  
-This doc about Pydrive2 : https://docs.iterative.ai/PyDrive2/filemanagement/
-This doc about gauth : https://docs.iterative.ai/PyDrive2/oauth/
-
+This was made following a batch tutorial, and the official Microsoft Doc.    
+This doc about Pydrive2 : https://docs.iterative.ai/PyDrive2/filemanagement/  
+This doc about gauth : https://docs.iterative.ai/PyDrive2/oauth/  
+  
 Contributions, issues and feature requests are welcome! Please feel free to:
 
 * Fork the repository
